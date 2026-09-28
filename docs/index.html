@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Penrose Diagrams</title>
+<meta name="description" content="Penrose diagrams as a definition in core Lean: a box is a matrix, a wire is an index, joining wires sums over it. The rules proved for every dimension and every matrix.">
+<style>body{margin:0;padding:16px;background:#05060a;display:flex;justify-content:center}#root{max-width:1240px;width:100%}p.foot{max-width:1240px;width:100%;font:13px -apple-system,Helvetica,Arial,sans-serif;color:#8a90a2;margin:14px 0 4px}a{color:#7fb2ff}</style>
+<script type="importmap">{"imports":{"react":"https://esm.sh/react@18.3.1","react-dom/client":"https://esm.sh/react-dom@18.3.1/client"}}</script>
+</head>
+<body style="flex-direction:column;align-items:center">
+<div id="root"></div>
+<p class="foot">The same widget Lean Studio shows in its Infoview, fed the numbers Lean computes. Proofs and source: <a href="https://github.com/keithadler/penrose-lean">github.com/keithadler/penrose-lean</a>. MIT License.</p>
+<script type="module">
+import * as React from 'react';
+import { createRoot } from 'react-dom/client';
+import PenroseWidget from './Penrose.js';
+const props = await (await fetch('./props.json')).json();
+createRoot(document.getElementById('root')).render(React.createElement(PenroseWidget, props));
+</script>
+</body>
+</html>
