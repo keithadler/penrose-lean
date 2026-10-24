@@ -67,7 +67,7 @@ It works the same in VS Code with the Lean 4 extension. Without Lean there is a
 lake build
 ```
 
-Core Lean 4.34, no Mathlib.
+Core Lean 4.35, no Mathlib.
 
 ## Files
 
